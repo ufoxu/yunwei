@@ -39,7 +39,7 @@ if __name__ == "__main__":
     conf_pwd = os.path.join(path_name, 'conf')
     conf_sub = os.path.join(conf_pwd, '%s.conf' % sub_name)
 
-    #: 日志路径&日志处理
+    #: 日志路径&日志处理 日志最好写绝对路径
     log_path = os.path.join(path_name, "logs", '%s.log' % (script_name,))
     script_info = ' '.join(sys.argv)
     _log = Utils(log_path)

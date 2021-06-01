@@ -13,6 +13,7 @@ import commands
 import sys
 import os
 from operate.op_prefix import Utils
+from operate.op_ansible import AdHocRunner
 
 reload(sys)
 sys.setdefaultencoding('utf8')
@@ -34,9 +35,9 @@ def ansible_get_setup(linux_hosts):
     datastructure = ret.results_raw
 
     #: 处理结果信息
-    ansible_result = run_setup_result(datastructure)
-    _log.logging.info(ansible_result)
-    return ansible_result
+    # ansible_result = run_setup_result(datastructure)
+    # _log.logging.info(ansible_result)
+    return datastructure
 
 
 if __name__ == "__main__":
