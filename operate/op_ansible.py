@@ -13,6 +13,8 @@ https://serversforhackers.com/c/running-ansible-2-programmatically
 notice:
 update: date：2021.06.01
 """
+
+
 from ansible.plugins.callback import CallbackBase
 from ansible.parsing.dataloader import DataLoader
 from ansible.vars.manager import VariableManager
@@ -24,6 +26,7 @@ from ansible.module_utils.common.collections import ImmutableDict
 from ansible import context
 import ansible.constants as C
 import json
+
 
 # Create a callback plugin so we can capture the output
 class ResultsCollectorJSONCallback(CallbackBase):
